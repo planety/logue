@@ -38,5 +38,4 @@ proc init*(name: seq[string]) =
     if dirExists(projName):
       echo fmt"{projName} already exists!"
     else:
-      createDir(projName)
       initProject(projName)

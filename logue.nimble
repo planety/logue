@@ -5,6 +5,7 @@ author        = "flywind"
 description   = "Command line tools for Prologue."
 license       = "Apache-2.0"
 srcDir        = "src"
+installExt    = @["nim"]
 bin           = @["logue"]
 
 
