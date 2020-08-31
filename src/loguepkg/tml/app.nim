@@ -1,3 +1,4 @@
+const appStr* = """
 import prologue
 
 import ./urls
@@ -15,3 +16,4 @@ let
 var app = newApp(settings = settings)
 app.addRoute(urls.urlPatterns, "/")
 app.run()
+"""

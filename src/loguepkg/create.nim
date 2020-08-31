@@ -1,4 +1,5 @@
 import os, strformat
+import tml / [app, urls, views]
 
 
 proc getEnvContent(appName: string): string =
@@ -21,14 +22,12 @@ proc initProject(projName: string) =
     viewsFile = projName / "views.nim"
     envFile = projName / ".env"
 
-  let path = currentSourcePath().splitPath.head
+  # let path = currentSourcePath().splitPath.head
 
-  copyFile(path / "tml" / "app.nim", appFile)
-  copyFile(path / "tml" / "urls.nim", urlsFile)
-  copyFile(path / "tml" / "views.nim", viewsFile)
+  writeFile(appFile, appStr)
+  writeFile(urlsFile, urlsStr)
+  writeFile(viewsFile, viewsStr)
   writeFile(envFile, getEnvContent(projName))
-
-
 
 proc init*(name: seq[string]) =
   if name.len == 0:
