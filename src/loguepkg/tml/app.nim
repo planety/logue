@@ -14,6 +14,7 @@ let
 
 
 var app = newApp(settings = settings)
+# Be careful with the routes.
 app.addRoute(urls.urlPatterns, "")
 app.run()
 """
