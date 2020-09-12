@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.2"
+version       = "0.1.4"
 author        = "flywind"
 description   = "Command line tools for Prologue."
 license       = "Apache-2.0"
@@ -12,5 +12,5 @@ bin           = @["logue"]
 
 # Dependencies
 
-requires "nim >= 1.2.0"
+requires "nim >= 1.2.6"
 requires "cligen >= 1.1.0"
