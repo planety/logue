@@ -1,4 +1,4 @@
-import os, osproc, strformat
+import os, strformat
 
 
 proc exe(appName: string) =
