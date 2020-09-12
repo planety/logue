@@ -1,10 +1,10 @@
 import cligen
 
-import loguepkg/create
+import loguepkg/[create, execute]
 
 
 proc main*() =
-  dispatchMulti([init])
+  dispatchMulti([init], [run])
 
 when isMainModule:
   main()
