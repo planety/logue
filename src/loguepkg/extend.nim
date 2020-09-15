@@ -20,7 +20,7 @@ proc extension*(name: seq[string]) =
     var output: string
     var errC: int
     if fileExists(nimbleFile):
-      (output, errC) = (nimbleFile, 0)
+      (output, errC) = (nimbleFile.parentDir, 0)
     else:
       (output, errC) = execCmdEx("nimble path prologue")
     if errC == 0:
