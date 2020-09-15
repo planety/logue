@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.6"
+version       = "0.1.8"
 author        = "flywind"
 description   = "Command line tools for Prologue."
 license       = "Apache-2.0"
