@@ -9,7 +9,6 @@ proc getEnvContent(appName: string): string =
 debug=true
 port=8080
 appName={appName}
-staticDir=/static
 secretKey=Pr435ol67ogue
 """
 

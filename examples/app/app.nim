@@ -7,11 +7,12 @@ let
   settings = newSettings(appName = env.getOrDefault("appName", "Prologue"),
                          debug = env.getOrDefault("debug", true),
                          port = Port(env.getOrDefault("port", 8080)),
-                         staticDirs = [env.get("staticDir")],
+                         staticDirs = [],
                          secretKey = env.getOrDefault("secretKey", "")
     )
 
 
 var app = newApp(settings = settings)
-app.addRoute(urls.urlPatterns, "/")
+# Be careful with the routes.
+app.addRoute(urls.urlPatterns, "")
 app.run()
