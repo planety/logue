@@ -3,7 +3,7 @@ import os, strformat
 
 proc exe(appName: string) =
   when defined(windows):
-    discard execShellCmd(fmt"nim c -r --hints:off --d:release --threads:on {appName}")
+    discard execShellCmd(fmt"nim c -r --hints:off --d:release {appName}")
   else:
     discard execShellCmd(fmt"nim c -r --hints:off --d:release --threads:on {appName}")
 
