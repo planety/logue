@@ -13,4 +13,4 @@ bin           = @["logue"]
 # Dependencies
 
 requires "nim >= 1.2.6"
-requires "cligen >= 1.1.0"
+requires "cligen >= 1.2.2"

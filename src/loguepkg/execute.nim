@@ -2,7 +2,10 @@ import os, strformat
 
 
 proc exe(appName: string) =
-  discard execShellCmd(fmt"nim c -r --hints:off --d:release --threads:on {appName}")
+  when defined(windows):
+    discard execShellCmd(fmt"nim c -r --hints:off --d:release --threads:on {appName}")
+  else:
+    discard execShellCmd(fmt"nim c -r --hints:off --d:release --threads:on {appName}")
 
 proc run*(name: seq[string]) =
   if name.len == 0 and fileExists("app.nim"):
