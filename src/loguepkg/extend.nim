@@ -13,6 +13,7 @@ template withDir(dir: string; body: untyped): untyped =
     setCurrentDir(curDir)
 
 proc extension*(name: seq[string]) =
+  ## Installs the given/all extension(s) for Prologue.
   if name.len == 0:
     echo "Please give the name of the extension or use logue extension all to install all extensions"
   else:

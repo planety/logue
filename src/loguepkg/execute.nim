@@ -8,6 +8,7 @@ proc exe(appName: string) =
     discard execShellCmd(fmt"nim c -r --hints:off --d:release --threads:on {appName}")
 
 proc run*(name: seq[string]) =
+  ## Runs the application.
   if name.len == 0 and fileExists("app.nim"):
     exe("app.nim")
   elif name.len > 0:

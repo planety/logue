@@ -65,6 +65,7 @@ proc initProject(projName: string, useConfig: bool) =
 
 
 proc init*(name: seq[string], useConfig = false) =
+  ## Creates a new Prologue project.
   if name.len == 0:
     echo "Please give the name of your project!"
   else:
